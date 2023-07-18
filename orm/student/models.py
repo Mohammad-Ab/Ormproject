@@ -1,9 +1,14 @@
 from django.db import models
 
 # Create your models here.
+class Teacher(models.Model):
+    fullname = models.CharField(max_length=100)
+    nationalcode = models.CharField(max_length=10,null=True)
+
 class Student(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(default="This is a Student.")
+    nationalcode = models.CharField(max_length=10,null=True)
 
     def __str__(self):
         return self.name
