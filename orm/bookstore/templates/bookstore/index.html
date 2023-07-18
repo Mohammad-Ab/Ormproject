@@ -1,0 +1,15 @@
+<style>
+    td{
+        padding: 10px;
+    }
+</style>
+<table border="1">
+    {% for book in books %}
+        <tr>
+            <td>{{book.name}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.rating}}</td>
+            <td>{{book.authors__count}}</td>
+        </tr>
+    {% endfor %}
+</table>
